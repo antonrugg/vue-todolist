@@ -32,7 +32,13 @@ const app = new Vue({
             if (this.todos[toDoIndex].done === true) {
                 return 'task-done';
             }
+        },
+
+        taskRemove(toDoIndex) {
+            this.todos.splice(toDoIndex, 1);
         }
+
+        
     }
 
 
