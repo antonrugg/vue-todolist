@@ -43,7 +43,6 @@ const app = new Vue({
         
         taskAdd() {
             this.todos.unshift(this.newToDo);
-            
         }
         
         

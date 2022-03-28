@@ -39,7 +39,7 @@
                 </li>
             </ul>
 
-            <input type="text" placeholder="Add your To Do"  v-model="newToDo.text">
+            <input type="text" placeholder="Add your To Do"  v-model="newToDo.text" @keyUp.enter="taskAdd">
             <button @click="taskAdd">Add</button>
 
         </div>
