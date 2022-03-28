@@ -25,7 +25,10 @@ const app = new Vue({
     data: {
         todos,
         doneToDos: [],
-        newToDo: ''
+        newToDo: {
+            text: '',
+            done: false
+        }
     },
     methods: {
         taskDone(toDoIndex) {
@@ -36,8 +39,13 @@ const app = new Vue({
 
         taskRemove(toDoIndex) {
             this.todos.splice(toDoIndex, 1);
+        },
+        
+        taskAdd() {
+            this.todos.unshift(this.newToDo);
+            
         }
-
+        
         
     }
 
