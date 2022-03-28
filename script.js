@@ -42,7 +42,16 @@ const app = new Vue({
         },
         
         taskAdd() {
-            this.todos.unshift(this.newToDo);
+
+            const newToDo = this.newToDo.text.trim();
+
+            if (newToDo.length > 0) {
+                this.todos.unshift(this.newToDo);
+            }
+
+            // this.newToDo = '';
+
+            
         },
 
         taskToggle(item) {
