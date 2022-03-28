@@ -34,7 +34,7 @@
                 <li v-for="(item, toDoIndex) in todos" :class="taskDone(toDoIndex)">
                     <div class="todo-item">
                       <i class="fa-solid fa-circle-xmark" @click="taskRemove(toDoIndex)"></i> 
-                   {{item.text}}  
+                   <span @click="taskToggle(item)">{{item.text}}</span>
                     </div>
                 </li>
             </ul>

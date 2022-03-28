@@ -43,6 +43,14 @@ const app = new Vue({
         
         taskAdd() {
             this.todos.unshift(this.newToDo);
+        },
+
+        taskToggle(item) {
+            if (item.done === true) {
+                item.done = false;
+            } else {
+                item.done = true;
+            }
         }
         
         
